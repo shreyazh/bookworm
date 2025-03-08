@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookworm.in - Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>  <!-- Load JavaScript -->
+</head>
+<body>
+    <header>
+        <h1>Bookworm.in</h1>
+        <p>Where your literary journey begins</p>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="book.html">Books</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Search Bar -->
+        <section class="search-bar">
+            <h2>Find your perfect read</h2>
+            <form action="#">
+                <input type="text" id="searchInput" placeholder="Search by title, author, or genre">
+                <button type="button" onclick="searchBooks()">Search</button>
+            </form>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+            <h3>Categories</h3>
+            <ul>
+                <a href="#" onclick="filterBooks('Fiction')">Fiction</a>
+                <a href="#" onclick="filterBooks('Mystery')">Mystery</a>
+                <a href="#" onclick="filterBooks('Fantasy')">Fantasy</a>
+                <a href="#" onclick="filterBooks('Non-fiction')">Non-fiction</a>
+                <a href="#" onclick="filterBooks('Romance')">Romance</a>
+            </ul>
+        </section>
+
+        <!-- Search Results -->
+        <section class="search-results">
+            <h3>Search Results</h3>
+            <div id="bookList" class="book-container">
+                <!-- Books will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>
